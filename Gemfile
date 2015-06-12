@@ -27,6 +27,9 @@ gem 'devise'
 # Bootstrap
 gem 'bootstrap-sass'
 
+# Omniauth
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
