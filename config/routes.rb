@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   root to: 'welcome#index'
 
 
