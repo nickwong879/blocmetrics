@@ -27,12 +27,10 @@ gem 'devise'
 # Bootstrap
 gem 'bootstrap-sass'
 
-<<<<<<< HEAD
-=======
+
 # Figaro
 gem 'figaro', '1.0'
 
->>>>>>> omniauth
 # Omniauth
 gem 'omniauth-facebook'
 

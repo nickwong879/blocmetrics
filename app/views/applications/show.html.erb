@@ -1,2 +1,25 @@
-<h1>Applications#show</h1>
-<p>Find me in app/views/applications/show.html.erb</p>
+<div class="container">
+	<div class="page-header">
+		<h1><%= @application.name %><small> ...your application on Blocmetrics</small></h1>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<div class="list-group">
+
+			<li class="list-group-item active">App name: <%= @application.name %></li>
+			<li class="list-group-item">App URL: <%= link_to @application.URL %></li>
+			<li class="list-group-item">App summary: <%= @application.summary %></li>
+			<li class="list-group-item"><small> registered <%= time_ago_in_words(@application.created_at) %> ago by <%= @application.user.name %></small></li>
+
+			</div>
+
+			<hr class="divider">
+
+			<%= link_to "Edit application details", edit_application_path, class: 'btn btn-primary' %>
+			<%= link_to "De-register application", application_path, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to de-register this application?'} %>
+
+		</div>
+	</div>
+
+</div>

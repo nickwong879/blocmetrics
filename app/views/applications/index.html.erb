@@ -1,7 +1,25 @@
 <div class="container">
+	<div class="page-header">
+		<h1>Registered Applications <small>on Blocmetrics</small></h1>
+	</div>
 
+	<% @applications.each do |app| %>
 
-<h1>Applications#index</h1>
-<p>Find me in app/views/applications/index.html.erb</p>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="list-group">
+
+			<li class="list-group-item active">App name: <%= app.name %></li>
+			<li class="list-group-item">App URL: <%= link_to app.URL %></li>
+			<li class="list-group-item">App summary: <%= app.summary %></li>
+			<li class="list-group-item">App ID: <%= app.id %></li>
+			<li class="list-group-item"><small> registered <%= time_ago_in_words(app.created_at) %> ago by <%= app.user.name %><br>
+			<%= link_to "View registration", application_path(app.id) %></small></li>
+
+			</div>
+		</div>
+	</div>
+
+	<% end %>
 
 </div>
