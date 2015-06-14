@@ -13,7 +13,7 @@
 			<li class="list-group-item">App URL: <%= link_to app.URL %></li>
 			<li class="list-group-item">App summary: <%= app.summary %></li>
 			<li class="list-group-item">App ID: <%= app.id %></li>
-			<li class="list-group-item"><small> registered <%= time_ago_in_words(app.created_at) %> ago by <%= app.user.name %><br>
+			<li class="list-group-item"><small> registered <%= time_ago_in_words(app.created_at) %> ago<br>
 			<%= link_to "View registration", application_path(app.id) %></small></li>
 
 			</div>

@@ -34,6 +34,9 @@ gem 'figaro', '1.0'
 # Omniauth
 gem 'omniauth-facebook'
 
+# Faker for seeding
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
