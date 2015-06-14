@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
 
+  get 'applications/index'
+
+  get 'applications/show'
+
+  get 'applications/new'
+
+  get 'applications/edit'
+
   get 'welcome/index'
 
   get 'welcome/about'
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   root to: 'welcome#index'
 
 
