@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'applications/index'
+
+  get 'applications/show'
+
+  get 'applications/new'
+
+  get 'applications/edit'
+
   get 'welcome/index'
 
   get 'welcome/about'
