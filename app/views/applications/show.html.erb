@@ -1,3 +1,5 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
 <div class="container">
 	<div class="page-header">
 		<h1><%= @application.name %><small> </small></h1>
@@ -13,7 +15,14 @@
 			<li class="list-group-item"><small> registered <%= time_ago_in_words(@application.created_at) %> ago</small></li>
 
 			</div>
+
+			<hr class="divider">
 				
+				<%= pie_chart @application.events.group(:name).count %>
+				<%= bar_chart @application.events.group(:name).count %>
+
+			<hr class="divider">
+
 				<div class="list-group">
 					<li class="list-group-item active"><span class="badge"><%= @application.events.count %></span>Events</li>
 					<% @application.events.each do |event| %>
