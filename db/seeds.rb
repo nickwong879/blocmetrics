@@ -18,6 +18,15 @@ require 'faker'
 end
 users = User.all
 
+# Admin user
+1.times do
+	user = User.create(
+		name: 'Admin',
+		email: 'admin@example.com',
+		password: 'helloworld'
+		)
+end
+
 # Create applications
 10.times do
 	Application.create!(

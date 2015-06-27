@@ -21,7 +21,6 @@
 				
 				<%= pie_chart @application.events.group(:name).count %>
 				<%= bar_chart @application.events.group(:name).count %>
-				<%= line_chart @application.events.group_by_day(:created_at).count %>
 
 			<hr class="divider">
 
